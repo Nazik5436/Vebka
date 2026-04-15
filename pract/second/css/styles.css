@@ -1,232 +1,160 @@
+/* Базові скидання та типографіка */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
 body {
-    font-family: 'Montserrat', sans-serif;
-    background-color: #E5E5E5;
-    padding: 40px;
+    /* Шрифт із зарубками для основного тексту, як на скриншоті */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #333;
+    line-height: 1.7;
+    background-color: #fff;
+    padding: 40px 20px;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: row-reverse;
-    background: #ffffff;
-    width: 1200px;
+/* Заголовки без зарубок для контрасту */
+h1,
+h2,
+h3,
+.logo-title,
+.site-description {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Обгортка сайту (відцентрована) */
+.site-wrapper {
+    max-width: 1000px;
     margin: 0 auto;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-/* Main content */
-
-.main-content {
-    padding: 88px;
+/* Шапка сайту */
+.site-header {
+    margin-bottom: 60px;
 }
 
-.main-content-title {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
-    color: #000000;
-    margin: 0 0 8px 0;
+.logo-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #111;
+    margin-bottom: 5px;
+    letter-spacing: -0.5px;
 }
 
-/* About me */
-
-.my-profession {
-    font-style: normal;
-    font-weight: 700;
+.site-description {
     font-size: 14px;
-    line-height: 17px;
-    color: #000000;
-    margin: 0 0 18px 0;
+    color: #777;
 }
 
-.my-name {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 45px;
-    line-height: 55px;
-    color: #000000;
-    margin: 0 0 28px 0;
+/* Макет у дві колонки */
+.main-layout {
+    display: flex;
+    gap: 60px;
 }
 
-.my-descr {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #595959;
-    width: 525px;
+.content-area {
+    flex: 1;
+    /* Займає весь вільний простір */
 }
-
-.about-me-container {
-    margin-bottom: 64px;
-}
-
-/* Projects */
-
-.project-item {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 24px;
-    color: #000000;
-}
-
-.project-list {
-    padding: 0 0 0 16px;
-    margin: 0;
-}
-
-.project-container {
-    margin-bottom: 48px;
-}
-
-.project-item-descr {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #595959;
-}
-
-.project-item-link {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    text-decoration-line: underline;
-    color: #005FFF;
-}
-
-/* Work experience */
-
-.work-experience-container {
-    margin-bottom: 44px;
-}
-
-.work-experience-position {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    color: #000000;
-    margin: 0;
-}
-
-.work-experience-place {
-    margin: 16px 0 0 0;
-}
-
-.work-experience-company {
-    color: #6D9BF5;
-}
-
-.work-period {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 15px;
-    color: #A8A8A8;
-    margin: 12px 0 8px 0;
-}
-
-.work-duties {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #595959;
-}
-
-.work-duties-list {
-    padding: 0 0 0 16px;
-    margin: 0;
-}
-
-/* Education */
-
-.education-place {
-    font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    color: #6D9BF5;
-}
-
-.managment-size {
-    margin: 12px 0 12px 0;
-}
-
-/* Sidebar */
 
 .sidebar {
-    width: 370px;
-    background: #E0EBFE;
+    width: 300px;
+    /* Фіксована ширина для бокової панелі */
+    flex-shrink: 0;
 }
 
-.my-photo {
-    margin-top: 40px;
+/* Стилі контенту (зліва) */
+.page-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #111;
 }
 
-.contacts-container,
-.tech-skills-container,
-.soft-skills-container {
-    margin: 48px 0 0 40px;
+.content-body p {
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: justify;
 }
 
-.sidebar-title {
-    font-style: normal;
+/* Стиль для фотографії всередині тексту */
+.profile-photo {
+    float: right;
+    /* Обтікання текстом зліва */
+    width: 250px;
+    height: auto;
+    margin: 0 0 20px 30px;
+    object-fit: cover;
+}
+
+/* Стилі бокової панелі (Sidebar) */
+.widget {
+    margin-bottom: 45px;
+}
+
+/* Рядок пошуку */
+.search-widget {
+    display: flex;
+}
+
+.search-widget input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-right: none;
+    font-family: inherit;
+}
+
+.search-widget button {
+    background: #111;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Заголовки віджетів (характерні чорні лінії зверху і знизу) */
+.widget-title {
+    font-size: 13px;
     font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
-    color: #161D2A;
-    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #111;
+    border-top: 2px solid #111;
+    border-bottom: 2px solid #111;
+    padding: 12px 0;
+    margin-bottom: 20px;
 }
 
-/* Contacts */
-.contacts-type {
-    font-style: normal;
-    font-weight: 700;
+/* Списки у віджетах */
+.widget-list {
+    list-style: none;
+}
+
+.widget-list li {
+    margin-bottom: 12px;
     font-size: 14px;
-    line-height: 24px;
-    color: #161D2A;
-    margin-right: 8px;
 }
 
-.contacts-item {
-    margin: 0;
+.widget-list li::before {
+    content: "• ";
+    color: #888;
+    margin-right: 5px;
 }
 
-.contacts-number {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #161D2A;
+.widget-list li a {
+    color: #444;
 }
 
-.contacts-email {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #2979FF;
-}
-
-/* Skills */
-
-.skills-list {
-    margin: 0;
-    padding: 0 0 0 16px;
-}
-
-.skills-list-item {
-    color: #6D9BF5;
-}
-
-.skills-list-text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 24px;
-    color: #161D2A;
+.widget-list li a:hover {
+    color: #111;
 }
