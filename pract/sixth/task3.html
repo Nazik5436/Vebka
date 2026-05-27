@@ -1,0 +1,50 @@
+<html>
+<head>
+    <title>Завдання 3 - Тест для школярів</title>
+    <script language="javascript">
+        function checkTest() {
+            var radios = document.getElementsByName("days");
+            var selectedValue;
+            for (var i = 0; i < radios.length; i++) {
+                if (radios[i].checked) {
+                    selectedValue = radios[i].value;
+                    break;
+                }
+            }
+
+            if (selectedValue === "30_31") {
+                alert("Правильно! У місяці буває від 28 до 31 дня.");
+            } else if (selectedValue) {
+                alert("Неправильно. Згадай календар!");
+            } else {
+                alert("Будь ласка, обери варіант відповіді.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Запитання: Скільки днів у місяці?</h2>
+    <form>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Перемикачі</th>
+                <th>Можливі відповіді</th>
+            </tr>
+            <tr>
+                <td align="center"><input type="radio" name="days" value="7"></td>
+                <td align="center">7</td>
+            </tr>
+            <tr>
+                <td align="center"><input type="radio" name="days" value="24"></td>
+                <td align="center">24</td>
+            </tr>
+            <tr>
+                <td align="center"><input type="radio" name="days" value="30_31"></td>
+                <td align="center">28, 30 або 31</td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" value="Перевірка рішення" onclick="checkTest()">
+    </form>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 2</title>
+</head>
+<body>
+    <h2>Результати математичних обчислень (з URL)</h2>
+    <div id="output">Параметри не знайдено. Додайте ?a=10&b=5 до URL.</div>
+
+    <script>
+        // Отримуємо параметри з адресного рядка
+        const params = new URLSearchParams(window.location.search);
+        
+        if (params.has('a') && params.has('b')) {
+            const a = parseInt(params.get('a'), 10) || 0;
+            const b = parseInt(params.get('b'), 10) || 0;
+
+            let outputHtml = `<p><b>Для a = ${a} та b = ${b}:</b></p>`;
+            outputHtml += `Сума: ${a + b}<br>`;
+            outputHtml += `Різниця: ${a - b}<br>`;
+            outputHtml += `Добуток: ${a * b}<br>`;
+            
+            if (b !== 0) {
+                outputHtml += `Частка: ${a / b}<br>`;
+            } else {
+                outputHtml += `Частка: Ділення на нуль неможливе!<br>`;
+            }
+
+            document.getElementById('output').innerHTML = outputHtml;
+        }
+    </script>
+</body>
+</html>

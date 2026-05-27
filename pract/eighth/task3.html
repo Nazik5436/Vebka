@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 3</title>
+</head>
+<body>
+    <h2>Калькулятор форми</h2>
+    <form id="calcForm">
+        Введіть c: <input type="number" id="valC" required><br><br>
+        Введіть d: <input type="number" id="valD" required><br><br>
+        <button type="submit">Обчислити</button>
+    </form>
+
+    <div id="result" style="margin-top: 20px;"></div>
+
+    <script>
+        document.getElementById('calcForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Зупиняємо стандартну відправку форми
+
+            const c = parseInt(document.getElementById('valC').value, 10);
+            const d = parseInt(document.getElementById('valD').value, 10);
+
+            let res = `<p><b>Для c = ${c} та d = ${d}:</b></p>`;
+            res += `Сума: ${c + d}<br>`;
+            res += `Різниця: ${c - d}<br>`;
+            res += `Добуток: ${c * d}<br>`;
+            
+            if (d !== 0) {
+                res += `Частка: ${c / d}<br>`;
+            } else {
+                res += `Частка: Ділення на нуль неможливе!<br>`;
+            }
+
+            document.getElementById('result').innerHTML = res;
+        });
+    </script>
+</body>
+</html>

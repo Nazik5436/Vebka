@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artem Patalashko | Portfolio</title>
+    <!-- Bootstrap 4 CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <!-- FontAwesome для іконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: #1a1a1a !important;
+        }
+        .jumbotron {
+            background-color: #1f1f1f;
+            border-bottom: 2px solid #007bff;
+        }
+        .text-accent {
+            color: #007bff;
+        }
+        .card-custom {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            transition: transform 0.3s;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            border-color: #007bff;
+        }
+        .badge-skill {
+            font-size: 0.9rem;
+            padding: 8px 12px;
+            margin: 5px;
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+        }
+        .section-title {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: "";
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background-color: #007bff;
+            bottom: -10px;
+            left: 25%;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Навігація -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand font-weight-bold" href="#">AP<span class="text-accent">.</span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">Про мене</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Навички</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Проєкти</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Контакти</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Головний екран -->
+    <div class="jumbotron jumbotron-fluid text-center mb-0 pb-5 pt-5">
+        <div class="container py-5">
+            <h1 class="display-4 font-weight-bold mb-3">Артем Паталашко</h1>
+            <h4 class="font-weight-light text-muted mb-4">Software Engineer <span class="text-accent">&</span> Tech Enthusiast</h4>
+            <p class="lead w-75 mx-auto mb-5">Фокусуюсь на написанні чистого коду, створенні зручного UI та розробці сучасних веб-додатків.</p>
+            <a href="#portfolio" class="btn btn-outline-primary btn-lg px-5 rounded-pill">Дивитись роботи</a>
+        </div>
+    </div>
+
+    <!-- Про мене -->
+    <div id="about" class="container py-5 mt-5">
+        <div class="row align-items-center">
+            <div class="col-md-6 mb-4 mb-md-0">
+                <div class="p-4" style="background-color: #1e1e1e; border-radius: 10px;">
+                    <h2 class="font-weight-bold mb-4">Створюю рішення, які <span class="text-accent">надихають</span>.</h2>
+                    <p>Я студент спеціальності "Комп'ютерна інженерія" у м. Хмельницький. Захоплююсь створенням інтерактивних та швидких інтерфейсів, а також проєктуванням надійної логіки на бекенді та в десктопних додатках.</p>
+                    <p class="mt-3"><strong>А тепер трохи рандомних фактів про мене:</strong></p>
+                    <ul class="text-muted small">
+                        <li>☕ Можу наосліп відрізнити Арабіку від Робусти та випиваю мінімум 3 чашки еспресо до того, як напишу перший рядок коду.</li>
+                        <li>⌨️ Обожнюю збирати кастомні механічні клавіатури. Мій улюблений звук — це клік світчів Cherry MX Blue.</li>
+                        <li>🚀 Фанат наукової фантастики та космосу. Мрію коли-небудь написати софт для марсохода.</li>
+                        <li>👽 Вірю, що правильна архітектура проєкту здатна врятувати світ (або хоча б нерви розробників).</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-6 text-center">
+                <!-- Тут може бути твоє стильне чорно-біле фото -->
+                <div style="width: 100%; height: 350px; background: linear-gradient(45deg, #1a1a1a, #2a2a2a); border-radius: 10px; display: flex; align-items: center; justify-content: center; border: 1px dashed #444;">
+                    <span class="text-muted">[ Фото / Аватар з чашкою кави ]</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Навички -->
+    <div id="skills" class="container-fluid py-5" style="background-color: #151515;">
+        <div class="container text-center py-4">
+            <h2 class="section-title">Технологічний стек</h2>
+            <div class="d-flex flex-wrap justify-content-center mt-4">
+                <span class="badge badge-skill text-light"><i class="fab fa-react text-info mr-2"></i>React</span>
+                <span class="badge badge-skill text-light"><i class="fab fa-vuejs text-success mr-2"></i>Vue 3</span>
+                <span class="badge badge-skill text-light"><i class="fab fa-js text-warning mr-2"></i>JavaScript (ES6+)</span>
+                <span class="badge badge-skill text-light"><i class="fab fa-sass text-danger mr-2"></i>SCSS / CSS3</span>
+                <span class="badge badge-skill text-light"><i class="fas fa-file-code text-primary mr-2"></i>C++ / CLI</span>
+                <span class="badge badge-skill text-light"><i class="fab fa-node-js text-success mr-2"></i>Node.js</span>
+                <span class="badge badge-skill text-light"><i class="fab fa-git-alt text-warning mr-2"></i>Git / GitHub</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Портфоліо -->
+    <div id="portfolio" class="container py-5 mt-5">
+        <div class="text-center">
+            <h2 class="section-title">Вибрані проєкти</h2>
+        </div>
+        <div class="row mt-5">
+            <!-- Проєкт 1 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card-custom h-100 text-light p-3">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">SmartKit <i class="fas fa-pills float-right text-accent"></i></h5>
+                        <h6 class="card-subtitle mb-3 text-muted">Pharmacy Management App</h6>
+                        <p class="card-text small">Система управління аптекою з логікою відстеження термінів придатності медикаментів. Розроблено виключно під десктопні екрани для потреб працівників.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0">
+                        <small class="text-info">JavaScript • Desktop UI</small>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Проєкт 2 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card-custom h-100 text-light p-3">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Nimbus <i class="fas fa-cloud float-right text-accent"></i></h5>
+                        <h6 class="card-subtitle mb-3 text-muted">SaaS Analytics Platform</h6>
+                        <p class="card-text small">Платформа для аналітики зі складною архітектурою. Реалізовано реактивні компоненти та кастомну стилізацію інтерфейсу.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0">
+                        <small class="text-info">React • SCSS</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проєкт 3 -->
+            <div class="col-lg-4 col-md-6 mb-4">
+                <div class="card card-custom h-100 text-light p-3">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">AutoTest CLI <i class="fas fa-cogs float-right text-accent"></i></h5>
+                        <h6 class="card-subtitle mb-3 text-muted">Система тестування</h6>
+                        <p class="card-text small">Десктопна програма (Windows Forms) для управління тестуванням. Включає серіалізацію даних у XML та складну логіку оцінювання.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0">
+                        <small class="text-info">C++ • Windows Forms • XML</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Проєкт 4 (Рандомний / Вигаданий) -->
+            <div class="col-lg-6 col-md-12 mb-4 mx-auto mt-3">
+                <div class="card card-custom h-100 text-light p-3" style="border-left: 3px solid #6f42c1;">
+                    <div class="card-body">
+                        <h5 class="card-title font-weight-bold">Galactic Explorer API <i class="fas fa-rocket float-right text-accent"></i></h5>
+                        <h6 class="card-subtitle mb-3 text-muted">Web App для фанатів космосу</h6>
+                        <p class="card-text small">Адаптивний веб-додаток, який тягне дані з відкритих API NASA та SpaceX. Дозволяє відстежувати дати наступних запусків ракет у реальному часі та переглядати "Астрономічне фото дня". Створено суто з любові до космічних технологій.</p>
+                    </div>
+                    <div class="card-footer bg-transparent border-0 pt-0">
+                        <small class="text-info">Vue 3 • REST API • Bootstrap 4</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Контакти та Футер -->
+    <footer id="contact" class="text-center py-5" style="background-color: #0a0a0a;">
+        <div class="container">
+            <h3 class="font-weight-bold mb-4">Готові до співпраці?</h3>
+            <p class="text-muted mb-4">Завжди відкритий до цікавих проєктів, обговорення коду або просто розмови про каву.</p>
+            <a href="mailto:your.email@example.com" class="btn btn-primary btn-lg rounded-pill px-5 mb-4">Написати мені</a>
+            
+            <div class="mt-4">
+                <a href="#" class="text-light mx-3" style="font-size: 1.5rem;"><i class="fab fa-github"></i></a>
+                <a href="#" class="text-light mx-3" style="font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="text-light mx-3" style="font-size: 1.5rem;"><i class="fab fa-telegram"></i></a>
+            </div>
+            <p class="text-muted small mt-5">&copy; 2026 Artem Patalashko. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Скрипти -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</body>
+</html>

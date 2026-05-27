@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Завдання 4</title>
+</head>
+<body>
+    <h2>Об'єднання рядків</h2>
+    <form id="stringForm">
+        Рядок e: <input type="text" id="strE" required><br><br>
+        Рядок f: <input type="text" id="strF" required><br><br>
+        <button type="submit">Вивести</button>
+    </form>
+
+    <div id="textResult" style="margin-top: 20px;"></div>
+
+    <script>
+        document.getElementById('stringForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Зупиняємо перезавантаження сторінки
+
+            const e = document.getElementById('strE').value;
+            const f = document.getElementById('strF').value;
+
+            let res = `<h3>Результат:</h3>`;
+            res += `а) Перша, потім друга: <b>${e} ${f}</b><br>`;
+            res += `б) Друга, потім перша: <b>${f} ${e}</b><br>`;
+
+            document.getElementById('textResult').innerHTML = res;
+        });
+    </script>
+</body>
+</html>

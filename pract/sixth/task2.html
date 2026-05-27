@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Завдання 2 - Тестування</title>
+    <script language="javascript">
+        function checkLogic() {     
+            var a1 = document.getElementById("ans1").checked; 
+            var a2 = document.getElementById("ans2").checked; 
+            var a3 = document.getElementById("ans3").checked;
+            var a4 = document.getElementById("ans4").checked;
+
+            if (a1 === true && a2 === false && a3 === false && a4 === true) {
+                alert("Усі відповіді правильні!");
+            } else {
+                alert("Є помилки. Перевірте таблицю істинності та спробуйте ще раз.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Логічний елемент ВИКЛЮЧАЮЧЕ АБО НЕ (рівнозначність)</h2>
+    <p>Для вводу 1 встановіть прапорець, для 0 - залиште порожнім.</p>
+    <form>
+        <table border="1" cellpadding="5">
+            <tr>
+                <th>Логічний вираз</th>
+                <th>Відповідь (вмикач)</th>
+            </tr>
+            <tr>
+                <td>0 XNOR 0 =</td>
+                <td align="center"><input type="checkbox" id="ans1"></td>
+            </tr>
+            <tr>
+                <td>0 XNOR 1 =</td>
+                <td align="center"><input type="checkbox" id="ans2"></td>
+            </tr>
+            <tr>
+                <td>1 XNOR 0 =</td>
+                <td align="center"><input type="checkbox" id="ans3"></td>
+            </tr>
+            <tr>
+                <td>1 XNOR 1 =</td>
+                <td align="center"><input type="checkbox" id="ans4"></td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" value="Перевірити рішення" onclick="checkLogic()">
+    </form>
+</body>
+</html>

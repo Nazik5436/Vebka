@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Завдання 4 - Обчислювальний процес</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+    var startX = parseFloat(prompt("Введіть початкове значення x:", "-6"));
+    var endX = parseFloat(prompt("Введіть кінцеве значення x:", "6"));
+    var step = parseFloat(prompt("Введіть крок зміни x:", "2"));
+
+    document.write("<h3>Результати обчислення функції W(x)</h3>");
+    document.write("<table border='1' cellpadding='5' style='border-collapse: collapse;'>");
+    document.write("<tr bgcolor='#f2f2f2'><th>Значення x</th><th>Значення W(x)</th></tr>");
+
+    for(var x = startX; x <= endX; x += step) {
+        var w;
+        var currentX = Math.round(x * 1000) / 1000; 
+
+        if (currentX < -4) {
+            w = Math.abs(currentX) + Math.tan(currentX);
+        } else if (currentX === -4) {
+            w = 23;
+        } else {
+            w = Math.cos(currentX) + currentX;
+        }
+
+        document.write("<tr>");
+        document.write("<td align='center'>" + currentX + "</td>");
+        document.write("<td align='center'>" + w.toFixed(4) + "</td>");
+        document.write("</tr>");
+    }
+    document.write("</table>");
+</script>
+</body>
+</html>

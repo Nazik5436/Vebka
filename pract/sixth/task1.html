@@ -1,0 +1,22 @@
+<html>
+<head>
+    <title>Завдання 1 - Кольори фону</title>
+    <script language="javascript">
+        function changeBgColor() {
+            var selectedColor = document.getElementById("colorSelect").value;
+            document.bgColor = selectedColor;
+        }
+    </script>
+</head>
+<body>
+    <h2>Оберіть колір фону:</h2>
+    <form>
+        <select id="colorSelect" onchange="changeBgColor()">
+            <option value="white" selected>Білий (за замовчуванням)</option>
+            <option value="green">Зелений</option>
+            <option value="gray">Сірий</option>
+            <option value="blue">Синій</option>
+        </select>
+    </form>
+</body>
+</html>

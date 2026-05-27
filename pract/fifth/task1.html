@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Завдання 1 - Візитні картки</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<script type="text/javascript">
+    var name = prompt('Введіть ваше ПІБ:', 'Іван Іванов');
+    var position = prompt('Введіть вашу професію:', 'Студент');
+    var phone = prompt('Введіть ваш телефон:', '099-999-99-99');
+    var visitcard = '<table width="100%" border="0">'
+        + '<tr>'
+        + '<td align="center" valign="middle">'
+        + '<img src="img/pixel.webp" alt="Логотип" width="50" height="50">'
+        + '</td>'
+        + '<td align="center">'
+        + '<b>' + name + '</b><br>'
+        + '<i>' + position + '</i><br>'
+        + '<font color="blue">' + phone + '</font>'
+        + '</td>'
+        + '</tr>'
+        + '</table>';
+
+    document.write('<table width="100%" border="0" align="center" cellspacing="5">');
+    for(var y = 0; y < 12; y++) {
+        document.write('<tr>');
+        for(var x = 0; x < 3; x++) {
+            document.write('<td align="center" style="border-style: dashed; border-width: thin; padding: 5px;">');
+            document.write(visitcard);
+            document.write('</td>');
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+</script>
+</body>
+</html>
